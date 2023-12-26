@@ -1,0 +1,33 @@
+""" to run the jupyter notebook " 
+
+step 1 
+Go to Docker hub pull the latest Jupyter/Daata Science notebook
+step 2 
+Run this command 
+docker run -p 10000:8888 jupyter/datascience-notebook 
+Step 3 
+when you will run this command a token will be generated in cmd 
+step 4 
+use that token and run this command - http://localhost:10000/?token=enter_the_token_number_from_cmd_prompt
+step 5 
+now you can open the notebook and run the command 
+
+""" how to go inside the container """
+exec - stands for execution 
+-i - input or output
+ t- terminal
+container id 
+bash 
+
+docker exec -it fd2d4220c4a7 bash
+
+
+""" how to copy from internal system i.e my local machine to Docker container for example how to copy dummy_data.csv to working directory of jupyter notebook """
+
+docker cp C:\Users\panch\Desktop\Gurobi-Docker\Advanced_Revenue_Avacado_problem\dummy_data.csv fd2d4220c4a7:/home/jovyan/work/dummy_data.csv
+
+""" Docker volume - how to mount the local space to Docker container "
+Add volume to the docker
+docker run -v C:\Users\panch\Desktop\Gurobi-Docker\Advanced_Revenue_Avacado_problem:/home/jovyan/work -p 10000:8888 jupyter/datascience-notebook
+
+
