@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  vscode:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/C:/Users/panch/Desktop/Gurobi-Docker/Advanced_Revenue_Avacado_problem
